@@ -3,83 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundpose&amp;Lab</title>
+    <title>Soundpose & Lab</title>
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --navy-deep: #0f1e36;
+            --navy-brand: #1e3a8a;
+            --navy-light: #eff6ff;
+            --border-color: #e2e8f0;
+        }
+
         body { 
-            background-color: #ffffff; 
-            color: #1e293b; 
+            background-color: var(--bg-color); 
+            color: var(--text-main); 
             font-family: 'Helvetica Neue', Arial, sans-serif; 
-            line-height: 1.8; 
+            line-height: 1.7; 
             margin: 0; 
-            padding: 50px 30px; 
-        }
-        .container { 
-            max-width: 800px; 
-            margin: 0 auto; 
-        }
-        h1 { 
-            color: #0f172a; 
-            font-size: 2.8rem; 
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 5px;
-        }
-        .subtitle { 
-            color: #475569; 
-            font-size: 1.25rem; 
-            font-weight: 400;
-            margin-top: 0;
-            margin-bottom: 50px;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 30px;
-        }
-        h2 { 
-            color: #1e3a8a; 
-            font-size: 1.6rem; 
-            font-weight: 600;
-            margin-top: 40px; 
-            margin-bottom: 20px;
-        }
-        ul { 
-            list-style-type: none; 
             padding: 0; 
+            -webkit-font-smoothing: antialiased;
         }
-        li { 
-            margin-bottom: 20px; 
-            padding-left: 15px;
-            border-left: 3px solid #1e3a8a;
+
+        /* Header Section */
+        header {
+            background-color: var(--navy-deep);
+            color: #ffffff;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--navy-brand);
         }
-        strong {
-            color: #0f172a;
-            font-size: 1.1rem;
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin: 0 0 15px 0;
+            color: #ffffff;
+        }
+
+        header .subtitle { 
+            color: #94a3b8; 
+            font-size: 1.4rem; 
+            font-weight: 300;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 80px 20px;
+        }
+
+        h2 { 
+            color: var(--navy-deep); 
+            font-size: 2rem; 
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--navy-brand);
+        }
+
+        /* Grid Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--navy-brand);
+            box-shadow: 0 12px 20px -3px rgba(30, 58, 138, 0.1);
+        }
+
+        .service-card strong {
+            color: var(--navy-deep);
+            font-size: 1.3rem;
             display: block;
-            margin-bottom: 2px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
-        .desc {
-            color: #334155;
+
+        .service-card .desc {
+            color: var(--text-sub);
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8fafc;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header .subtitle { font-size: 1.1rem; }
+            main { padding: 50px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Soundpose&amp;Lab</h1>
-        <p class="subtitle">New Media Music Consulting Agency Fusing Art and Technology</p>
-        
+
+    <header>
+        <div class="header-container">
+            <h1>Soundpose &amp; Lab</h1>
+            <p class="subtitle">New Media Music Consulting Agency Fusing Art and Technology</p>
+        </div>
+    </header>
+
+    <main>
         <h2>Core Services</h2>
-        <ul>
-            <li>
+        <div class="services-grid">
+            <div class="service-card">
                 <strong>New Media Music Creation &amp; Production</strong>
-                <span class="desc">Directing convergence media art projects</span>
-            </li>
-            <li>
+                <span class="desc">Directing convergence media art projects with advanced technological integration.</span>
+            </div>
+            <div class="service-card">
                 <strong>Academic &amp; Policy Research</strong>
-                <span class="desc">Research and investigation in cultural arts</span>
-            </li>
-            <li>
+                <span class="desc">Conducting professional research and investigation in cultural arts policy and industry models.</span>
+            </div>
+            <div class="service-card">
                 <strong>Cultural Arts Consulting</strong>
-                <span class="desc">Professional consulting for public institutions and artistic projects</span>
-            </li>
-        </ul>
-    </div>
+                <span class="desc">Providing optimal institutional bidding strategies and comprehensive solutions for public art projects.</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Soundpose &amp; Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
