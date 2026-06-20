@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundpose & Lab</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Soundpose &amp; Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     
     <meta name="google-site-verification" content="f7gXb27LwG-w_Kq6zO7Vp-Lp07zQ4v6K2X2L9x4M7w0" />
     
@@ -19,10 +19,9 @@
             --accent-cyan: #06b6d4;
         }
 
-      body { 
+        body { 
             background-color: var(--bg-dark); 
             color: var(--text-light); 
-            /* 폰트를 Montserrat(영문용)와 Noto Sans KR(국문용)의 최고급 조합으로 변경 */
             font-family: 'Montserrat', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif; 
             line-height: 1.8; 
             margin: 0; 
@@ -39,15 +38,15 @@
             width: 100vw;
             height: 100vh;
             z-index: 1;
-            pointer-events: none; /* 클릭 차단하여 본문 텍스트 클릭 가능하게 처리 */
+            pointer-events: none;
         }
 
-        /* 전체 콘텐츠 랩퍼 (캔버스 위에 띄움) */
         .content-wrapper {
             position: relative;
             z-index: 2;
         }
-/* 📌 상단 고정 네비게이션 바 스타일 */
+
+        /* 📌 상단 고정 네비게이션 바 스타일 */
         nav {
             position: fixed;
             top: 0;
@@ -87,7 +86,7 @@
         html {
             scroll-behavior: smooth;
         }
-        /* Header Section (시네마틱 무드) */
+
         header {
             padding: 140px 20px 80px 20px;
             text-align: center;
@@ -118,7 +117,6 @@
             text-transform: uppercase;
         }
 
-        /* Main Content */
         main {
             max-width: 800px; 
             margin: 0 auto; 
@@ -142,7 +140,6 @@
             display: inline-block;
         }
 
-        /* 소개 텍스트 블록 (반투명 유리창 감성 - 글래스모피즘) */
         .intro-block {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -178,7 +175,6 @@
             font-weight: 300;
         }
 
-        /* 구분선 매끄럽게 변경 */
         .divider {
             border: 0;
             height: 1px;
@@ -186,7 +182,6 @@
             margin: 30px 0;
         }
 
-        /* 독립된 링크 버튼 구역 */
         .links-container {
             display: flex;
             justify-content: center;
@@ -235,7 +230,6 @@
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
         }
 
-        /* Footer Section */
         footer {
             background: rgba(0, 0, 0, 0.4);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -265,7 +259,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 📱 모바일 화면 최적화 */
         @media (max-width: 768px) {
             header { padding: 100px 20px 40px 20px; }
             header h1 { font-size: 2.5rem; }
@@ -284,221 +277,218 @@
 
     <canvas id="particle-canvas"></canvas>
 
-   <div class="content-wrapper">
-<nav>
-        <div class="nav-container">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#business">Business Model</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+    <div class="content-wrapper">
+        <nav>
+            <div class="nav-container">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#business">Business Model</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <div id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
+            <p style="margin: 0 0 15px 0; font-size: 1.05rem; letter-spacing: 0.15em; color: #60a5fa; font-weight: 500;">문화 · 예술 · 기술 융합 연구소</p>
+            <h1 style="margin: 0 0 5px 0; font-size: 5.2rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #93c5fd, #a5f3fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em;">Soundpose &amp; Lab</h1>
+            <p style="margin: 0 0 35px 0; font-size: 1.15rem; color: rgba(255, 255, 255, 0.5); font-weight: 300; letter-spacing: 0.2em;">사운드포즈앤랩</p>
+            <p style="margin: 0 0 25px 0; font-size: 2.1rem; font-weight: 600; line-height: 1.7; color: #ffffff; letter-spacing: 0.05em; font-family: 'Noto Sans KR', sans-serif;">
+                심장을 뛰게 할 파동으로,<br>
+                거대한 미디어의 파도로,<br>
+                다가올 미래를 압도할 속도로.
+            </p>
+            <p style="margin: 0 0 50px 0; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.05em; line-height: 1.5; color: var(--text-muted); font-family: 'Montserrat', sans-serif;">
+                With waves that make the heart race, through immense tides of media, at a speed that overwhelms the coming future.
+            </p>
+            <div style="color: rgba(255,255,255,0.2); font-size: 1.6rem; animation: bounce 2s infinite; cursor: default;">↓</div>
         </div>
-    </nav>
 
-    <div id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
-        <p style="margin: 0 0 15px 0; font-size: 1.05rem; letter-spacing: 0.15em; color: #60a5fa; font-weight: 500;">문화 · 예술 · 기술 융합 연구소</p>
-        <h1 style="margin: 0 0 5px 0; font-size: 5.2rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #93c5fd, #a5f3fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em;">Soundpose &amp; Lab</h1>
-        <p style="margin: 0 0 35px 0; font-size: 1.15rem; color: rgba(255, 255, 255, 0.5); font-weight: 300; letter-spacing: 0.2em;">사운드포즈앤랩</p>
-        <p style="margin: 0 0 25px 0; font-size: 2.1rem; font-weight: 600; line-height: 1.7; color: #ffffff; letter-spacing: 0.05em; font-family: 'Noto Sans KR', sans-serif;">
-            심장을 뛰게 할 파동으로,<br>
-            거대한 미디어의 파도로,<br>
-            다가올 미래를 압도할 속도로.
-        </p>
-        <p style="margin: 0 0 50px 0; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.05em; line-height: 1.5; color: var(--text-muted); font-family: 'Montserrat', sans-serif;">
-            With waves that make the heart race, through immense tides of media, at a speed that overwhelms the coming future.
-        </p>
-        <div style="color: rgba(255,255,255,0.2); font-size: 1.6rem; animation: bounce 2s infinite; cursor: default;">↓</div>
-    </div>
-
-    <header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 40px 20px; text-align: center; scroll-margin-top: 100px;">
-        <div class="header-container" style="max-width: 900px; margin: 0 auto; width: 100%;">
-            <h2 style="margin-bottom: 40px; color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em;">About Us <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-top: 5px;">회사 소개 및 비전</span></h2>
-            
-            <div class="intro-block" style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 40px 35px; text-align: center;">
-                <div class="intro-item">
-                    <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">New Media Music Creation &amp; Production</strong>
-                    <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">뉴미디어 음악 창작 및 제작</span>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">첨단 기술 융합과 실험적 차세대 미디어아트 프로젝트 기획</p>
-                </div>
-                <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
-                <div class="intro-item">
-                    <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Academic &amp; Policy Research</strong>
-                    <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 학술 및 정책 연구</span>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">음악을 중심으로 한 뉴미디어 학술 연구 및 문화정책 연구
-                </div>
-                <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
-                <div class="intro-item">
-                    <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Cultural Arts Consulting</strong>
-                    <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 컨설팅</span>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">공공기관 국책 사업 및 문화공간 기획</p>
+        <header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 40px 20px; text-align: center; scroll-margin-top: 100px;">
+            <div class="header-container" style="max-width: 900px; margin: 0 auto; width: 100%;">
+                <h2 style="margin-bottom: 40px; color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em;">About Us <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-top: 5px;">회사 소개 및 비전</span></h2>
+                
+                <div class="intro-block" style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 40px 35px; text-align: center;">
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">New Media Music Creation &amp; Production</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">뉴미디어 음악 창작 및 제작</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">첨단 기술 융합과 실험적 차세대 미디어아트 프로젝트 기획</p>
+                    </div>
+                    <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Academic &amp; Policy Research</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 학술 및 정책 연구</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">음악을 중심으로 한 뉴미디어 학술 연구 및 문화정책 연구</p>
+                    </div>
+                    <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Cultural Arts Consulting</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 컨설팅</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">공공기관 국책 사업 및 문화공간 기획</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-  <main>
-<section id="business" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
-            <div style="max-width: 1000px; width: 100%; margin: 0 auto;">
-                
-                <h2 style="color: #ffffff; font-size: 2.3rem; letter-spacing: 0.05em; margin: 0 0 5px 0; text-align: center;">Business Model</h2>
-                <span style="font-size: 1.05rem; font-weight: 300; color: var(--text-muted); display: block; margin: 0 0 35px 0; text-align: center;">핵심 비즈니스 라인업</span>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; text-align: left;">
+        <main>
+            <section id="business" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
+                <div style="max-width: 1000px; width: 100%; margin: 0 auto;">
+                    <h2 style="color: #ffffff; font-size: 2.3rem; letter-spacing: 0.05em; margin: 0 0 5px 0; text-align: center;">Business Model</h2>
+                    <span style="font-size: 1.05rem; font-weight: 300; color: var(--text-muted); display: block; margin: 0 0 35px 0; text-align: center;">핵심 비즈니스 라인업</span>
                     
-                    <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 35px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); box-sizing: border-box;">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🌐</span>
-                        <h3 style="color: #ffffff; margin: 0 0 15px 0; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;">
-                            Unfoldsix<br>
-                            <span style="font-size: 1.05rem; font-weight: 400; color: #60a5fa; margin-top: 4px; display: inline-block;">언폴드식스</span>
-                        </h3>
-                        <p style="color: #cbd5e1; font-size: 0.95rem; font-weight: 300; line-height: 1.75; margin: 0; letter-spacing: 0.01em;">
-                            다채널 블루투스 스피커 하드웨어 개발 및 임베디드 오디오 시스템 설계를 바탕으로, 뉴미디어 음향 기술 플랫폼과 서라운드 시스템 솔루션의 일상화를 선도해 나갑니다.
-                        </p>
-                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 35px; text-align: left;">
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 35px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); box-sizing: border-box;">
+                            <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🌐</span>
+                            <h3 style="color: #ffffff; margin: 0 0 15px 0; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;">
+                                Unfoldsix<br>
+                                <span style="font-size: 1.05rem; font-weight: 400; color: #60a5fa; margin-top: 4px; display: inline-block;">언폴드식스</span>
+                            </h3>
+                            <p style="color: #cbd5e1; font-size: 0.95rem; font-weight: 300; line-height: 1.75; margin: 0; letter-spacing: 0.01em;">
+                                다채널 블루투스 스피커 하드웨어 개발 및 임베디드 오디오 시스템 설계를 바탕으로, 뉴미디어 음향 기술 플랫폼과 서라운드 시스템 솔루션의 일상화를 선도해 나갑니다.
+                            </p>
+                        </div>
 
-                    <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 35px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); box-sizing: border-box;">
-                        <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🌳</span>
-                        <h3 style="color: #ffffff; margin: 0 0 15px 0; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;">
-                            Windtree<br>
-                            <span style="font-size: 1.05rem; font-weight: 400; color: #60a5fa; margin-top: 4px; display: inline-block;">바람나무</span>
-                        </h3>
-                        <p style="color: #cbd5e1; font-size: 0.95rem; font-weight: 300; line-height: 1.75; margin: 0; letter-spacing: 0.01em;">
-                            자연 친화적 사운드 힐 링, 스토리텔링 융합 감성 청감 문화 콘텐츠 및 다양한 예술적 감성을 결합한 공공 인프라 오디오 사운드스케이프를 디자인합니다.
-                        </p>
+                        <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; padding: 35px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); box-sizing: border-box;">
+                            <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🌳</span>
+                            <h3 style="color: #ffffff; margin: 0 0 15px 0; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.3;">
+                                Windtree<br>
+                                <span style="font-size: 1.05rem; font-weight: 400; color: #60a5fa; margin-top: 4px; display: inline-block;">바람나무</span>
+                            </h3>
+                            <p style="color: #cbd5e1; font-size: 0.95rem; font-weight: 300; line-height: 1.75; margin: 0; letter-spacing: 0.01em;">
+                                자연 친화적 사운드 힐링, 스토리텔링 융합 감성 청감 문화 콘텐츠 및 다양한 예술적 감성을 결합한 공공 인프라 오디오 사운드스케이프를 디자인합니다.
+                            </p>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="portfolio" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 60px 20px; scroll-margin-top: 100px;">
+                <div style="max-width: 1100px; width: 100%;">
+                    <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px; text-align: center;">Portfolio</h2>
+                    <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 40px; text-align: center;">전체 사업 실적 및 연구 역량</span>
                     
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 50px;">
+                        <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
+                            <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">01</span>
+                            <div style="flex-grow: 1;">
+                                <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Director Profile <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">디렉터 프로필</span></h3>
+                                <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 사운드포즈앤랩 대표 / 뉴미디어음악학 박사(Ph.D.)<br>• 음반 및 음원 제작 / 대학 강의 / 문화재단 아트홀 운영</p>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
+                            <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">02</span>
+                            <div style="flex-grow: 1;">
+                                <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Music Production <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">음원 제작</span></h3>
+                                <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 삼성전자, 한국관광공사, 서울여대 등 바이럴 음원 제작<br>• 국내 아티스트 음반 발매 및 공기관 / 사기업 음원 제작 다수</p>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
+                            <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">03</span>
+                            <div style="flex-grow: 1;">
+                                <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Academia <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">학술 활동</span></h3>
+                                <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 국내대학 외래강사 출강<br>• 국제학술발표 다수</p>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
+                            <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">04</span>
+                            <div style="flex-grow: 1;">
+                                <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Awards <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">수상이력</span></h3>
+                                <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 음악부문, [해양경찰청장상], [포스코홀딩스] 외 음악상 11건 수상<br>• 논문부문, [인천시장상], [한국도로공사장상] 외 논문상 7건 수상</p>
+                            </div>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
+                            <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">05</span>
+                            <div style="flex-grow: 1;">
+                                <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Research <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">연구활동</span></h3>
+                                <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 문화산업연구 등 국내외 저명 학술지 논문 게재 및 발표 18건<br>• 단행본 발간</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 12px; padding: 30px; text-align: left; font-size: 0.8rem; line-height: 1.8; color: rgba(255, 255, 255, 0.45); font-family: 'Noto Sans KR', sans-serif;">
+                        <h4 style="color: #ffffff; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Detailed Achievements (세부 활동 실적)</h4>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[작·편곡 및 CM 제작]</strong>
+                            유튜버 동공이약사 프로젝트 음악 제작 (2024) / 사프라이즈 롯데백화점 팝업매장 CM 제작 (2024) / 한국관광공사 문화관광축제 팝업스토어 '구석구석 가게' CM송 제작 (2024) / 연산동물의료센터 CM송 제작 (2024) / 도칸보리 CM송 제작 (2024) / K-Forest Food 로고송 제작 (2024) / 자동차 필터 Zest CM송 제작 (2024) / 더원이비인후과의원 CM송 제작 (2024) / 1KG 탕수육 CM송 제작 (2024) / 맥아더 부대찌개 CM송 제작 (2024) / 마장동고깃집 CM송 제작 (2024) / 유튜버 빗진의 작은책장 로고송 제작 (2024) / 삼성전자 개발팀 S&amp;P 로고송 제작 (2023) / 서울여자대학교 SWU 영상음악 제작 (2023) / 프랜차이즈 람스병원 365MC CM 및 징글송 제작 (2023) / 충북보건과학대학교 CM 제작 (2023) / 애견박람회 댕블리마켓 CM 제작 (2023) / 레스토닉 매트리스 CM 제작 (2023) / 포항 흥해공업고등학교 CM 제작 (2023) / 모바일게임 현타삼국 CM 제작 (2023) / 슥네트워크 영상 BGM 제작 (2023) / 스튜디오나우 족발 광고 BGM 제작 (2023) / 돈가스 전문프랜차이즈 뜨돈! CM 제작 (2023) / 블루투스 스피커 My bar 안내음 제작 (2023) / 광주 동구 지자치 경찰 모니터링단 로고송 제작 (2023) / 김복녀약과 CM 제작 (2023) / 레독스생명공학 징글송 제작 (2023) / 특허 마스크 숨플러스 CM 제작 (2023) / 맥경매사무소 CM 제작 (2023) / SpaCafe 도드리 CM 제작 (2023) / 신화부동산, 신화경매사무소 CM 제작 (2023) / 용인대최봉준태권도 CM 제작 (2023) / 굿모닝결혼정보 징글송 제작 (2023) / 무신사입점 브랜드 덕화맨숀 브랜드송 제작 (2023) / 광주광역시 짱태권도 CM 제작 (2023) / 대구광역시 함께하는 동구 로고송 제작 (2023) / 에스칼프린트 CM 및 징글송 제작 (2022) / 독한공부 입시학원 CM 제작 (2022) / 유심페이 CM 제작 (2022) / 변비약 아임쏘파인 광고 BGM 제작 (2021) / KB 국민은행 캠퍼스 스타 16기 로고송 제작 (2020) / 광주 북구 여성친화 도시 편곡 (2016)
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[음악감독 및 감독 경력]</strong>
+                            NSTBio 광고영상 음악감독 (2023) / 서울우유 광고 음악감독 (2023) / 아이엠그라운드 마녀스프 광고 음악감독 (2023) / 루리플러스 광고 음악감독 (2023) / 펫트루 광고 음악감독 (2023) / 옆커폰 광고 음악감독 (2023) / 스튜디오나우 족발 광고 음악감독 (2023) / 아시아문화원 &lt;자유결혼&gt; 음악 조감독 (2020) / 광주시립극단 '세자매' 음향감독 (2019)
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[교육경력]</strong>
+                            대림대학교 외래교수 (2024.03.01~現) / 상명대학원 뉴미디어음악학과 특강 'AI 기반 음악 창작의 저작권: 공정이용을 통한 저작권 활용 방안' (2023) / 운남중학교 진로체험 작곡 특강 (2022) / 청소년삶디자인센터 싱어송라이터부 작곡 멘토링 (2022) / 하나중학교 방과후학교 밴드부 지도 (2022~2023) / 곡성군미래교육재단 극단마실 작곡지도 (2022~2024) / 조엘교육음악학원 실용음악 강사 (2022) / 전남중학교 방과후학교 컴퓨터음악반 (2021) / GOArt 실용음악강사 (2021)
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[주요 논문 및 연구발표]</strong>
+                            KCI 등재, 교육과정평가연구 '핀란드 음악교육 실태를 통한 국내 음악교육 발전 방안 연구' (2024) / 학술발표, 문화산업연구 '핀란드 음악교육 실태를 통한 국내 음악교육 발전 방안 연구' (2024) / 박사학위논문, 상명대학교 일반대학원 뉴미디어음악학과 '슈톡하우젠의 공간 이동 패턴을 활용한 디지털 에뮬레이션에 대한 연구' / 석사학위논문, 상명대학교 일반대학원 뉴미디어음악학과 '인공지능 음악 창작물에 대한 공정이용 개정 연구' (2024) / KCI 등재, 문화산업연구 '인공지능 음색합성 음악의 권리 규정 연구' (2023) / 학술발표, 문화산업연구 '인공지능 음색합성 음악의 권리 규정 연구' (2023) / 국제학술발표, 문화산업연구 'A Study of K-Pop's Vocal to Accompaniment Ratio (LAR)' (2023)
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[수상경력]</strong>
+                            해양경찰정책연구 논문 공모 수상 '불법, 비보고 및 비규제 어업에 대한 미국의 전략 분석' (2024) / 대한상사중재원 논문 공모 수상 '국제 중재에서의 인공지능 활용 연구' (2024) / 인천평화안보 논문 공모 [대상] '국제인도법 관점으로 본 인천상륙작전' (2024) / 한국도로공사 논문 공모 [우수상] 'K-MaaS를 통한 교통서비스 모델 연구' (2024) / 고용노동부 한국장애인고용공단 [장애인고용 콘텐츠] 수상 (2024) / 상명 계당 학술 논문 공모 [우수논문상] '고령자 음악활동의 문화복지정책 개선 방안 연구' (2024) / 제주연구원 논문 공모 '제주 생활물류 운임지원 정책' (2023) / Posco 세가터 쇼츠공모 수상 [음악제작] (2023) / 한국정신문화재단 논문 공모 대학원부 [우수상] '인간다움의 관점으로 바라본 인공지능 창작물' (2023) / UN평화기념관 'UN참전국고맙송콘테스트' 수상 (2020) / 청렴한해양문화공모 음악부문 [해양경찰청장상] (2020) / 2020홍루이젠광고공모 징글부문 [최우수상] / 청산리대첩 100주년기념콘텐츠경연대회 [우수상] (2020) / CTS 주관 '코리아이스터퍼레이드' 로고송 수상 (2020) / '사교육걱정없는세상' 콘텐츠 공모 [최우수상] (2020) / 대통령직속 농어업특별위원회 주관 '농정의 툴을 짜자' 음원부문 [농어업특별위원회장상] (2019) / 한돈자조금관리위원회 '우리돼지한돈' CM송 수상 (2019) 외 전라북도지사배 전국수영대회 접영 100M 1위 등 체육 부문 다수 수상
+                        </div>
+
+                        <div style="margin-bottom: 20px;">
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[음악활동 및 세션]</strong>
+                            싱어송라이터 An 'Day By Day' Mixing &amp; Mastering (2023) / 싱어송라이터 Xena &amp; Fairies '여행을 떠나요' Arrangement, Mixing &amp; Mastering (2023) / 싱어송라이터 Rin 'Earth' Piano, Arrangement, Mixing &amp; Mastering (2022) / 정율성음악축제 양림프로젝트 진이랑밴드 세컨건반 세션 (2022) / 전남문화관광재단 청춘마이크 Team 'Jazz Carmina' 대표 및 피아노 연주 (2020) / 광주프린지페스티벌 Team 'Jazz Carmina' 피아노 연주 (2020) / 전남문화관광재단 온텍트컬쳐테라피 피아노 연주 (2020) / 대동문화재단 통합 네트워크 워크숍 인문학 오딧세이 피아노 연주 (2020) / 광주광역시 2020충장축제 Team 'Jazz Carmina' 피아노 연주 (2020)
+                        </div>
+
+                        <div>
+                            <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[대외활동]</strong>
+                            서울 종로구 청년 네트워크 위원 및 교육문화분과장 (2024.08.12 ~ 2026.08.12) / 담양군 문화재단 공연예술연습공간 사업추진 보조 (2021)
+                        </div>
+                    </div>
+
+                    <div class="links-container" style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
+                        <a href="https://www.youtube.com/@Earmusic" target="_blank" class="action-button btn-youtube" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em;">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            YOUTUBE LINK
+                        </a>
+                        <a href="https://brunch.co.kr/@eb859060242041a" target="_blank" class="action-button btn-brunch" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em;">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-3.5H9v3.5H7v-9h2V12h2V8.5h2V12h2V8.5h2v9h-6z"/></svg>
+                            BRUNCH LINK
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
- <section id="portfolio" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 60px 20px; scroll-margin-top: 100px;">
-            <div style="max-width: 1100px; width: 100%;">
-                <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px; text-align: center;">Portfolio</h2>
-                <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 40px; text-align: center;">전체 사업 실적 및 연구 역량</span>
-                
-                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 50px;">
-                    <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
-                        <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">01</span>
-                        <div style="flex-grow: 1;">
-                            <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Director Profile <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">디렉터 프로필</span></h3>
-                            <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 사운드포즈앤랩 대표 / 뉴미디어음악학 박사(Ph.D)<br>• 음반 및 음원 제작 / 대학 강의 / 문화재단 아트홀 운영</p>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
-                        <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">02</span>
-                        <div style="flex-grow: 1;">
-                            <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Music Production <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">음원 제작</span></h3>
-                            <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 삼성전자, 한국관광공사, 서울여대 등 바이럴 음원 제작<br>• 국내 아티스트 음반 발매 및 공기관 / 사기업 음원 제작 다수</p>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
-                        <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">03</span>
-                        <div style="flex-grow: 1;">
-                            <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Academia <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">학술 활동</span></h3>
-                            <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 국내대학 외래강사 출강<br>• 국제학술발표 다수</p>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
-                        <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">04</span>
-                        <div style="flex-grow: 1;">
-                            <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Awards <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">수상이력</span></h3>
-                            <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 음악부문, [해양경찰청장상], [포스코홀딩스] 외 음악상 11건 수상<br>• 논문부문, [인천시장상], [한국도로공사장상] 외 논문상 7건 수상</p>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.01); border-left: 3px solid #3b82f6; padding: 15px 25px; display: flex; align-items: center; gap: 30px;">
-                        <span style="font-size: 1rem; color: #60a5fa; font-weight: 800; min-width: 30px;">05</span>
-                        <div style="flex-grow: 1;">
-                            <h3 style="color: #ffffff; margin: 0 0 3px 0; font-size: 1.15rem;">Research <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 300; margin-left: 10px;">연구활동</span></h3>
-                            <p style="color: #cbd5e1; font-size: 0.92rem; margin: 0; font-weight: 300; line-height: 1.6;">• 문화산업연구 등 국내외 저명 학술지 논문 게재 및 발표 18건<br>• 단행본 발간</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 12px; padding: 30px; text-align: left; font-size: 0.8rem; line-height: 1.8; color: rgba(255, 255, 255, 0.45); font-family: 'Noto Sans KR', sans-serif;">
-                    <h4 style="color: #ffffff; font-size: 1.1rem; margin: 0 0 20px 0; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">Detailed Achievements (세부 활동 실적)</h4>
+            <section id="contact" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 40px 20px; scroll-margin-top: 100px;">
+                <div style="max-width: 600px; width: 100%; text-align: center;">
+                    <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px;">Contact</h2>
+                    <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 45px;">비즈니스 및 제안 문의</span>
                     
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[작·편곡 및 CM 제작]</strong>
-                        유튜버 동공이약사 프로젝트 음악 제작 (2024) / 사프라이즈 롯데백화점 팝업매장 CM 제작 (2024) / 한국관광공사 문화관광축제 팝업스토어 '구석구석 가게' CM송 제작 (2024) / 연산동물의료센터 CM송 제작 (2024) / 도칸보리 CM송 제작 (2024) / K-Forest Food 로고송 제작 (2024) / 자동차 필터 Zest CM송 제작 (2024) / 더원이비인후과의원 CM송 제작 (2024) / 1KG 탕수육 CM송 제작 (2024) / 맥아더 부대찌개 CM송 제작 (2024) / 마장동고깃집 CM송 제작 (2024) / 유튜버 빗진의 작은책장 로고송 제작 (2024) / 삼성전자 개발팀 S&amp;P 로고송 제작 (2023) / 서울여자대학교 SWU 영상음악 제작 (2023) / 프랜차이즈 람스병원 365MC CM 및 징글송 제작 (2023) / 충북보건과학대학교 CM 제작 (2023) / 애견박람회 댕블리마켓 CM 제작 (2023) / 레스토닉 매트리스 CM 제작 (2023) / 포항 흥해공업고등학교 CM 제작 (2023) / 모바일게임 현타삼국 CM 제작 (2023) / 슥네트워크 영상 BGM 제작 (2023) / 스튜디오나우 족발 광고 BGM 제작 (2023) / 돈가스 전문프랜차이즈 뜨돈! CM 제작 (2023) / 블루투스 스피커 My bar 안내음 제작 (2023) / 광주 동구 지자치 경찰 모니터링단 로고송 제작 (2023) / 김복녀약과 CM 제작 (2023) / 레독스생명공학 징글송 제작 (2023) / 특허 마스크 숨플러스 CM 제작 (2023) / 맥경매사무소 CM 제작 (2023) / SpaCafe 도드리 CM 제작 (2023) / 신화부동산, 신화경매사무소 CM 제작 (2023) / 용인대최봉준태권도 CM 제작 (2023) / 굿모닝결혼정보 징글송 제작 (2023) / 무신사입점 브랜드 덕화맨숀 브랜드송 제작 (2023) / 광주광역시 짱태권도 CM 제작 (2023) / 대구광역시 함께하는 동구 로고송 제작 (2023) / 에스칼프린트 CM 및 징글송 제작 (2022) / 독한공부 입시학원 CM 제작 (2022) / 유심페이 CM 제작 (2022) / 변비약 아임쏘파인 광고 BGM 제작 (2021) / KB 국민은행 캠퍼스 스타 16기 로고송 제작 (2020) / 광주 북구 여성친화 도시 편곡 (2016)
-                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 40px 30px; text-align: left;">
+                        <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
+                            <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Director</span>
+                            <span style="color: #ffffff; font-size: 1.05rem; font-weight: 400;">박성국 (Sungguk Park)</span>
+                        </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[음악감독 및 감독 경력]</strong>
-                        NSTBio 광고영상 음악감독 (2023) / 서울우유 광고 음악감독 (2023) / 아이엠그라운드 마녀스프 광고 음악감독 (2023) / 루리플러스 광고 음악감독 (2023) / 펫트루 광고 음악감독 (2023) / 옆커폰 광고 음악감독 (2023) / 스튜디오나우 족발 광고 음악감독 (2023) / 아시아문화원 &lt;자유결혼&gt; 음악 조감독 (2020) / 광주시립극단 '세자매' 음향감독 (2019)
-                    </div>
+                        <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
+                            <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Email</span>
+                            <a href="mailto:eb859060@gmail.com" style="color: #ffffff; font-size: 1.05rem; font-weight: 400; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">posepose77@gmail.com</a>
+                        </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[교육경력]</strong>
-                        대림대학교 외래교수 (2024.03.01~現) / 상명대학원 뉴미디어음악학과 특강 'AI 기반 음악 창작의 저작권: 공정이용을 통한 저작권 활용 방안' (2023) / 운남중학교 진로체험 작곡 특강 (2022) / 청소년삶디자인센터 싱어송라이터부 작곡 멘토링 (2022) / 하나중학교 방과후학교 밴드부 지도 (2022~2023) / 곡성군미래교육재단 극단마실 작곡지도 (2022~2024) / 조엘교육음악학원 실용음악 강사 (2022) / 전남중학교 방과후학교 컴퓨터음악반 (2021) / GOArt 실용음악강사 (2021)
-                    </div>
+                        <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
+                            <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Phone</span>
+                            <span style="color: #ffffff; font-size: 1.05rem; font-weight: 400; letter-spacing: 0.02em;">+82 10-9031-8621</span>
+                        </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[주요 논문 및 연구발표]</strong>
-                        KCI 등재, 교육과정평가연구 '핀란드 음악교육 실태를 통한 국내 음악교육 발전 방안 연구' (2024) / 학술발표, 문화산업연구 '핀란드 음악교육 실태를 통한 국내 음악교육 발전 방안 연구' (2024) / 박사학위논문, 상명대학교 일반대학원 뉴미디어음악학과 '슈톡하우젠의 공간 이동 패턴을 활용한 디지털 에뮬레이션에 대한 연구' / 석사학위논문, 상명대학교 일반대학원 뉴미디어음악학과 '인공지능 음악 창작물에 대한 공정이용 개정 연구' (2024) / KCI 등재, 문화산업연구 '인공지능 음색합성 음악의 권리 규정 연구' (2023) / 학술발표, 문화산업연구 '인공지능 음색합성 음악의 권리 규정 연구' (2023) / 국제학술발표, 문화산업연구 'A Study of K-Pop's Vocal to Accompaniment Ratio (LAR)' (2023)
-                    </div>
-
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[수상경력]</strong>
-                        해양경찰정책연구 논문 공모 수상 '불법, 비보고 및 비규제 어업에 대한 미국의 전략 분석' (2024) / 대한상사중재원 논문 공모 수상 '국제 중재에서의 인공지능 활용 연구' (2024) / 인천평화안보 논문 공모 [대상] '국제인도법 관점으로 본 인천상륙작전' (2024) / 한국도로공사 논문 공모 [우수상] 'K-MaaS를 통한 교통서비스 모델 연구' (2024) / 고용노동부 한국장애인고용공단 [장애인고용 콘텐츠] 수상 (2024) / 상명 계당 학술 논문 공모 [우수논문상] '고령자 음악활동의 문화복지정책 개선 방안 연구' (2024) / 제주연구원 논문 공모 '제주 생활물류 운임지원 정책' (2023) / Posco 세가터 쇼츠공모 수상 [음악제작] (2023) / 한국정신문화재단 논문 공모 대학원부 [우수상] '인간다움의 관점으로 바라본 인공지능 창작물' (2023) / UN평화기념관 'UN참전국고맙송콘테스트' 수상 (2020) / 청렴한해양문화공모 음악부문 [해양경찰청장상] (2020) / 2020홍루이젠광고공모 징글부문 [최우수상] / 청산리대첩 100주년기념콘텐츠경연대회 [우수상] (2020) / CTS 주관 '코리아이스터퍼레이드' 로고송 수상 (2020) / '사교육걱정없는세상' 콘텐츠 공모 [최우수상] (2020) / 대통령직속 농어업특별위원회 주관 '농정의 툴을 짜자' 음원부문 [농어업특별위원회장상] (2019) / 한돈자조금관리위원회 '우리돼지한돈' CM송 수상 (2019) 외 전라북도지사배 전국수영대회 접영 100M 1위 등 체육 부문 다수 수상
-                    </div>
-
-                    <div style="margin-bottom: 20px;">
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[음악활동 및 세션]</strong>
-                        싱어송라이터 An 'Day By Day' Mixing &amp; Mastering (2023) / 싱어송라이터 Xena &amp; Fairies '여행을 떠나요' Arrangement, Mixing &amp; Mastering (2023) / 싱어송라이터 Rin 'Earth' Piano, Arrangement, Mixing &amp; Mastering (2022) / 정율성음악축제 양림프로젝트 진이랑밴드 세컨건반 세션 (2022) / 전남문화관광재단 청춘마이크 Team 'Jazz Carmina' 대표 및 피아노 연주 (2020) / 광주프린지페스티벌 Team 'Jazz Carmina' 피아노 연주 (2020) / 전남문화관광재단 온텍트컬쳐테라피 피아노 연주 (2020) / 대동문화재단 통합 네트워크 워크숍 인문학 오딧세이 피아노 연주 (2020) / 광주광역시 충장축제 Team 'Jazz Carmina' 피아노 연주 (2020)
-                    </div>
-
-                    <div>
-                        <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[대외활동]</strong>
-                        서울 종로구 청년 네트워크 위원 및 교육문화분과장 (2024.08.12 ~ 2026.08.12) / 담양군 문화재단 공연예술연습공간 사업추진 보조 (2021)
+                        <div style="display: flex; align-items: flex-start; gap: 15px;">
+                            <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Address</span>
+                            <span style="color: #cbd5e1; font-size: 1rem; font-weight: 300; line-height: 1.6;">19-13 Manyang-ro 18-gil, Dongjak-gu, Seoul</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="links-container" style="display: flex; justify-content: center; gap: 30px; margin-top: 40px;">
-                    <a href="https://www.youtube.com/@Earmusic" target="_blank" class="action-button btn-youtube" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em;">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        YOUTUBE LINK
-                    </a>
-                    <a href="https://brunch.co.kr/@eb859060242041a" target="_blank" class="action-button btn-brunch" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; letter-spacing: 0.05em;">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-3.5H9v3.5H7v-9h2V12h2V8.5h2V12h2V8.5h2v9h-6z"/></svg>
-                        BRUNCH LINK
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 40px 20px; scroll-margin-top: 100px;">
-            <div style="max-width: 600px; width: 100%; text-align: center;">
-                <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px;">Contact</h2>
-                <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-bottom: 45px;">비즈니스 및 제안 문의</span>
-                
-                <div style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 40px 30px; text-align: left;">
-                    <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
-                        <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Director</span>
-                        <span style="color: #ffffff; font-size: 1.05rem; font-weight: 400;">박성국 (Sungguk Park)</span>
-                    </div>
-
-                    <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
-                        <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Email</span>
-                        <a href="mailto:eb859060@gmail.com" style="color: #ffffff; font-size: 1.05rem; font-weight: 400; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);">posepose77@gmail.com</a>
-                    </div>
-
-                    <div style="margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
-                        <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Phone</span>
-                        <span style="color: #ffffff; font-size: 1.05rem; font-weight: 400; letter-spacing: 0.02em;">+82 10-9031-8621</span>
-                    </div>
-
-                    <div style="display: flex; align-items: flex-start; gap: 15px;">
-                        <span style="color: #60a5fa; font-weight: 600; font-size: 0.95rem; min-width: 80px; text-transform: uppercase; letter-spacing: 0.05em;">Address</span>
-                        <span style="color: #cbd5e1; font-size: 1rem; font-weight: 300; line-height: 1.6;"> 19-13 Manyang-ro 18-gil, Dongjak-gu, Seoul</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
         <footer>
             <div class="container">
@@ -560,7 +550,6 @@
                 if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
                 if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
 
-                // 마우스 근처 영역 척력(밀어내는) 효과 구현
                 let dx = mouse.x - this.x;
                 let dy = mouse.y - this.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
@@ -578,7 +567,6 @@
 
         function init() {
             particlesArray = [];
-            // 화면 크기에 맞춘 적절한 입자 수 조율
             let numberOfParticles = (canvas.height * canvas.width) / 9000;
             for (let i = 0; i < numberOfParticles; i++) {
                 let size = (Math.random() * 2) + 0.5;
@@ -586,7 +574,6 @@
                 let y = (Math.random() * ((innerHeight - size * 2) - size * 2) + size * 2);
                 let directionX = (Math.random() * 0.4) - 0.2;
                 let directionY = (Math.random() * 0.4) - 0.2;
-                // 미디어아트 무드의 반투명 백색 입자 광원
                 let color = 'rgba(255, 255, 255, ' + (Math.random() * 0.3 + 0.1) + ')';
 
                 particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
@@ -603,7 +590,6 @@
             connect();
         }
 
-        // 입자들끼리 가까워지면 미세한 선으로 신경망처럼 연결해주는 웹아트 효과
         function connect() {
             let opacityValue = 1;
             for (let a = 0; a < particlesArray.length; a++) {
