@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundpose &amp; Lab</title>
+    <title>사운드포즈앤랩 | Soundpose &amp; Lab</title>
+    
+    <!-- 🔍 [검색최적화] 국문 검색 노출을 극대화하기 위한 핵심 메타태그 세트 -->
+    <meta name="description" content="사운드포즈앤랩(Soundpose & Lab) 공식 웹사이트. 뉴미디어 음악 창작, 사운드스케이프 설계, 문화예술 학술 및 정책 연구 전문 컨설팅 에이전시.">
+    <meta name="keywords" content="사운드포즈앤랩, 사운드포즈, soundposenlab, soundpose, 뉴미디어음악, 사운드스케이프, 언폴드식스, 바람나무">
+    
+    <!-- 🖥️ SNS 및 링크 공유 시 국문 노출용 오픈그래프 -->
+    <meta property="og:title" content="사운드포즈앤랩 | Soundpose &amp; Lab">
+    <meta property="og:description" content="문화 · 예술 · 기술 융합 뉴미디어 음악 연구소">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
@@ -46,7 +56,7 @@
             z-index: 2;
         }
 
-        /* 📌 [요청 반영] 상단 고정 네비게이션 바 와이드 레이아웃 */
+        /* 📌 상단 고정 네비게이션 바 스타일 (사운드울프 스타일 와이드 정렬) */
         nav {
             position: fixed;
             top: 0;
@@ -57,21 +67,21 @@
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             z-index: 9999;
-            padding: 20px 0;
+            padding: 15px 0;
             box-sizing: border-box;
         }
 
         .nav-container {
-            max-width: 100%; /* 사운드울프 스타일 와이드 정렬 */
+            max-width: 100%; /* 전체 가로폭 100% 활용 */
             margin: 0 auto;
             display: flex;
-            justify-content: space-between; /* 👈 로고는 왼쪽 끝, 카테고리는 오른쪽 끝 분리 */
+            justify-content: space-between; /* 좌측 로고 - 우측 메뉴 완전히 분리 */
             align-items: center;
-            padding: 0 60px; /* 좌우 끝 여백 조절 */
+            padding: 0 40px; /* 양옆 여백을 줄여 로고와 메뉴가 화면 끝에 더 밀착되도록 수정 */
             box-sizing: border-box;
         }
 
-        /* 🎨 [요청 반영] 메인 타이틀 크기만큼 웅장하게 키운 왼쪽 로고 스타일 */
+        /* 🎨 왼쪽 대형 공식 로고 링크 스타일 */
         .nav-logo-link {
             display: flex;
             align-items: center;
@@ -79,31 +89,34 @@
         }
 
         .nav-logo-img {
-            height: 65px; /* 👈 메인 영문 타이틀 높이급으로 시원하게 대형화 */
+            height: 65px; /* 타이틀급 초대형 크기 유지 */
             width: auto;
             object-fit: contain;
             border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
-            transition: transform 0.3s ease;
+            /* 💡 [로고 선명화 적용] 어두운 로고를 선명하게 띄우기 위한 화이트 네온 광원 및 밝기 보정 필터 */
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
+            filter: brightness(1.2) contrast(1.1); 
+            transition: all 0.3s ease;
         }
 
         .nav-logo-link:hover .nav-logo-img {
             transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
         }
 
-        /* 🧭 [요청 반영] 오른쪽 끝에 완전히 붙는 카테고리 메뉴 묶음 */
+        /* 🧭 오른쪽 끝으로 완전히 붙는 카테고리 메뉴 묶음 */
         .nav-menu {
             display: flex;
-            gap: 45px; /* 카테고리 글자 간격 */
+            gap: 35px; /* 글자가 작아진 만큼 간격도 세련되게 좁힘 */
         }
 
         .nav-menu a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.78rem; /* 👈 카테고리 글씨 크기를 더 작고 콤팩트하게 변경 */
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.15em; /* 자간을 넓혀 작은 글씨의 가독성 확보 */
             text-transform: uppercase;
             transition: color 0.3s ease;
             cursor: pointer;
@@ -289,7 +302,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* 📱 모바일 반응형 뷰 최적화 (로고와 메뉴의 밸런스 유지) */
+        /* 📱 반응형 최적화 모바일 화면 레이아웃 */
         @media (max-width: 992px) {
             .nav-container { padding: 0 30px; }
             .nav-logo-img { height: 50px; }
@@ -329,15 +342,15 @@
     <canvas id="particle-canvas"></canvas>
 
     <div class="content-wrapper">
-        <!-- 📌 [요청 완벽 반영] 좌측 로고 완전 대형화 및 우측 카테고리 와이드 배치 -->
+        <!-- 📌 [상단 고정 메뉴 바] 좌측 오피셜 선명화 로고 + 우측 카테고리 고정형 구조 -->
         <nav>
             <div class="nav-container">
-                <!-- 🌐 좌측 끝: 존재감 있게 대형화된 오피셜 원형 로고 -->
+                <!-- 🌐 좌측 끝: 새하얗고 선명한 테두리 광원을 품은 대형 로고 -->
                 <a href="#home" class="nav-logo-link">
                     <img src="logo.png" alt="Soundpose Logo" class="nav-logo-img">
                 </a>
                 
-                <!-- 🧭 우측 끝: 완벽하게 오른쪽으로 밀착 정렬된 카테고리 메뉴들 -->
+                <!-- 🧭 우측 끝: 더 작아지고 완전 밀착 정렬된 메뉴 링크 묶음 -->
                 <div class="nav-menu">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
@@ -348,7 +361,7 @@
             </div>
         </nav>
 
-        <!-- 🌌 [Home] 대문 섹션 레이아웃 (구조 정상화 및 하위 콘텐츠 차단 해결) -->
+        <!-- 🌌 [Home] 메인 섹션 구역 -->
         <div id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
             <p style="margin: 0 0 15px 0; font-size: 1.05rem; letter-spacing: 0.15em; color: #60a5fa; font-weight: 500;">문화 · 예술 · 기술 융합 연구소</p>
             <h1 id="main-title" style="margin: 0 0 5px 0; font-size: 5.2rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #93c5fd, #a5f3fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em;">Soundpose &amp; Lab</h1>
@@ -364,7 +377,7 @@
             <div style="color: rgba(255,255,255,0.2); font-size: 1.6rem; animation: bounce 2s infinite; cursor: default;">↓</div>
         </div>
 
-        <!-- 📌 [About] 하위 섹션들 정상 노출 보장 -->
+        <!-- 📌 [About] 소개 구역 -->
         <header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 40px 20px; text-align: center; scroll-margin-top: 100px;">
             <div class="header-container" style="max-width: 900px; margin: 0 auto; width: 100%;">
                 <h2 style="margin-bottom: 40px; color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em;">About Us <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-top: 5px;">회사 소개 및 비전</span></h2>
@@ -392,7 +405,7 @@
         </header>
 
         <main>
-            <!-- 📌 [Business Model] -->
+            <!-- 📌 [Business Model] 비즈니스 구역 -->
             <section id="business" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
                 <div style="max-width: 1000px; width: 100%; margin: 0 auto;">
                     <h2 style="color: #ffffff; font-size: 2.3rem; letter-spacing: 0.05em; margin: 0 0 5px 0; text-align: center;">Business Model</h2>
@@ -424,7 +437,7 @@
                 </div>
             </section>
 
-            <!-- 📌 [Portfolio] -->
+            <!-- 📌 [Portfolio] 포트폴리오 실적 구역 -->
             <section id="portfolio" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 60px 20px; scroll-margin-top: 100px;">
                 <div style="max-width: 1100px; width: 100%;">
                     <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px; text-align: center;">Portfolio</h2>
@@ -487,7 +500,7 @@
 
                         <div style="margin-bottom: 20px;">
                             <strong style="color: #60a5fa; display: block; margin-bottom: 4px; font-size: 0.85rem;">[교육경력]</strong>
-                            대림대학교 외래교수 (2024.03.01~現) / 상명대학원 뉴미디어음악학과 특강 'AI 기반 음악 창작의 저작권: 공정이용을 통한 저작권 활용 방안' (2023) / 운남중학교 진로체험 작곡 특강 (2022) / 청소년삶디자인센터 싱어송라이터부 작곡 멘토링 (2022) / 하나중학교 방과후학교 밴드부 지도 (2022~2023) / 곡성군미래교육재단 극단마실 작곡지도 (2022~2024) / 조엘교육음악학원 실용음악 강사 (2022) / 전남중학교 방과후학교 컴퓨터음악반 (2021) / GOArt 실용음악강사 (2021)
+                            대림대학교 외래교수 (2024.03.01~現) / 상명대학원 뉴미디어음악학과 특강 'AI 기반 음악 창작의 저작권: 공정이용을 통한 저작권 활용 방안' (2023) / 운남중학교 진로체험 작곡 특강 (2022) / 청소년삶디자인센터 싱어송라이터부 작곡 멘토링 (2022) / 하나중학교 방과후학교 밴드부 지도 (2022~2023) / 곡성군미래교육재단 극단마실 작곡지도 (2022~2024) / 조엘교육음악학원 실용음악 강사 (2022) / 전남중학교 방과후학교 밴드부 지도 (2022~2023) / 곡성군미래교육재단 극단마실 작곡지도 (2022~2024) / 조엘교육음악학원 실용음악 강사 (2022) / 전남중학교 방과후학교 컴퓨터음악반 (2021) / GOArt 실용음악강사 (2021)
                         </div>
 
                         <div style="margin-bottom: 20px;">
@@ -524,7 +537,7 @@
                 </div>
             </section>
 
-            <!-- 📌 [Contact] -->
+            <!-- 📌 [Contact] 문의 구역 -->
             <section id="contact" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 40px 20px; scroll-margin-top: 100px;">
                 <div style="max-width: 600px; width: 100%; text-align: center;">
                     <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px;">Contact</h2>
@@ -641,4 +654,4 @@
                 let directionY = (Math.random() * 0.4) - 0.2;
                 let color = 'rgba(255, 255, 255, ' + (Math.random() * 0.3 + 0.1) + ')';
 
-Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+                particlesArray.push(new Particle(x,Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
