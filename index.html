@@ -46,7 +46,7 @@
             z-index: 2;
         }
 
-        /* 📌 상단 고정 네비게이션 바 스타일 */
+/* 📌 상단 고정 네비게이션 바 스타일 (사운드울프 스타일 양끝 와이드 정렬) */
         nav {
             position: fixed;
             top: 0;
@@ -57,19 +57,60 @@
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             z-index: 9999;
-            padding: 20px 0;
+            padding: 25px 0; /* 위아래 여백을 주어 덜 답답하게 조정 */
             box-sizing: border-box;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px; /* 사운드울프처럼 와이드하게 배치 */
             margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* 👈 좌측 로고 - 우측 메뉴 양끝 정렬의 핵심 */
             align-items: center;
-            gap: 40px;
-            padding: 0 30px;
+            padding: 0 50px; /* 양옆 여유 공간 */
             box-sizing: border-box;
+        }
+
+        /* 🎨 왼쪽 대형 공식 로고 링크 스타일 */
+        .nav-logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            height: 40px; /* 👈 사운드울프처럼 시원시원하게 크기 키움! */
+            width: auto;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo-link:hover .nav-logo-img {
+            transform: scale(1.05);
+        }
+
+        /* 🧭 오른쪽으로 정렬될 메뉴 묶음 */
+        .nav-menu {
+            display: flex;
+            gap: 40px; /* 메뉴 글자 사이 간격 */
+        }
+
+        .nav-menu a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
         }
 
         /* 🧭 상단 메뉴 링크 기본 스타일 */
@@ -315,18 +356,19 @@
     <canvas id="particle-canvas"></canvas>
 
     <div class="content-wrapper">
-        <!-- 📌 [상단 고정 메뉴 바] HOME 글자 왼쪽에 미니 로고 매립 완성 -->
-        <nav>
-            <div class="nav-container">
-                <a href="#home">
-                    <img src="logo.png" alt="Soundpose Logo" class="home-mini-logo">Home
-                </a>
-                <a href="#about">About</a>
-                <a href="#business">Business Model</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+<!-- 359번 줄부터 370번 줄까지 기존 내용 -->
+<!-- 📌 [상단 고정 메뉴 바] HOME 글자 왼쪽에 미니 로고 매립 완성 -->
+<nav>
+    <div class="nav-container">
+        <a href="#home">
+            <img src="logo.png" alt="Soundpose Logo" class="home-mini-logo">Home
+        </a>
+        <a href="#about">About</a>
+        <a href="#business">Business Model</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
         <!-- 🌌 [Home] 대문 섹션 복구 완료 (구조 정상화) -->
         <div id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
