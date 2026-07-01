@@ -355,7 +355,49 @@
             </div>
         </nav>
 
-<main>
+<!-- 🌌 [Home] 메인 섹션 구역 -->
+        <div id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
+            <p style="margin: 0 0 15px 0; font-size: 1.05rem; letter-spacing: 0.15em; color: #60a5fa; font-weight: 500;">문화 · 예술 · 기술 융합 연구소</p>
+            <h1 id="main-title" style="margin: 0 0 5px 0; font-size: 5.2rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #93c5fd, #a5f3fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em;">Soundpose &amp; Lab</h1>
+            <p id="main-subtitle" style="margin: 0 0 35px 0; font-size: 1.15rem; color: rgba(255, 255, 255, 0.5); font-weight: 300; letter-spacing: 0.2em;">사운드포즈앤랩</p>
+            <p id="main-slogan" style="margin: 0 0 25px 0; font-size: 2.1rem; font-weight: 600; line-height: 1.7; color: #ffffff; letter-spacing: 0.05em; font-family: 'Noto Sans KR', sans-serif;">
+                뉴미디어 콘텐츠 개발 연구
+            </p>
+            <p id="main-en-slogan" style="margin: 0 0 50px 0; font-size: 1.1rem; font-weight: 300; letter-spacing: 0.05em; line-height: 1.5; color: var(--text-muted); font-family: 'Montserrat', sans-serif;">
+                New Media Content Development Research
+            </p>
+            <div style="color: rgba(255,255,255,0.2); font-size: 1.6rem; animation: bounce 2s infinite; cursor: default;">↓</div>
+        </div>
+
+        <!-- 📌 [About] 소개 구역 -->
+        <header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 40px 20px; text-align: center; scroll-margin-top: 100px;">
+            <div class="header-container" style="max-width: 900px; margin: 0 auto; width: 100%;">
+                <h2 style="margin-bottom: 40px; color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em;">About Us <span style="font-size: 1.1rem; font-weight: 300; color: var(--text-muted); display: block; margin-top: 5px;">회사 소개 및 비전</span></h2>
+                
+                <div class="intro-block" style="background: rgba(255, 255, 255, 0.01); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 16px; padding: 40px 35px; text-align: center;">
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">New Media Music Creation &amp; Production</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">뉴미디어 음악 창작 및 제작</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">차세대 미디어아트 프로젝트 기획</p>
+                    </div>
+                    <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Academic &amp; Policy Research</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 학술 및 정책 연구</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">음악 중심 뉴미디어 학술 연구 및 문화정책 연구</p>
+                    </div>
+                    <div class="divider" style="border: 0; height: 1px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.08), rgba(255,255,255,0)); margin: 25px 0;"></div>
+                    <div class="intro-item">
+                        <strong style="color: #ffffff; font-size: 1.25rem; display: block; margin-bottom: 8px; font-weight: 600;">Cultural Arts Consulting</strong>
+                        <span style="color: #60a5fa; font-size: 0.95rem; display: block; margin-bottom: 6px; font-weight: 500;">문화예술 컨설팅</span>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0; font-weight: 300; line-height: 1.7;">공공기관 국책 사업 및 문화공간 기획</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 📌 [Business Model] 비즈니스 구역 -->
             <section id="business" style="height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 20px; scroll-margin-top: 100px;">
                 <div style="max-width: 1000px; width: 100%; margin: 0 auto;">
                     <h2 style="color: #ffffff; font-size: 2.3rem; letter-spacing: 0.05em; margin: 0 0 5px 0; text-align: center;">Business Model</h2>
@@ -387,6 +429,7 @@
                 </div>
             </section>
 
+            <!-- 📌 [Portfolio] 포트폴리오 실적 구역 -->
             <section id="portfolio" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; box-sizing: border-box; padding: 60px 20px; scroll-margin-top: 100px;">
                 <div style="max-width: 1100px; width: 100%;">
                     <h2 style="color: #ffffff; font-size: 2.4rem; letter-spacing: 0.05em; margin-bottom: 5px; text-align: center;">Portfolio</h2>
